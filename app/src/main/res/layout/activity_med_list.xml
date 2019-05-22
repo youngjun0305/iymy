@@ -12,7 +12,7 @@
         <Button
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:text="편집"
+            android:text="편집2"
             android:textColor="#ff0000"
             android:background="#00ff0000"
             app:layout_constraintTop_toTopOf="parent"
