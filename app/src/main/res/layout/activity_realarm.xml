@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main">
+
+    <Spinner
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:id="@+id/minSpinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvMin"
+        android:layout_marginTop="200dp">
+
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMin"
+        android:text="분 후"
+        android:textSize="50dp"
+        android:textColor="#000000"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/minSpinner"
+        android:layout_marginTop="200dp" />
+
+    <TextView
+        android:id="@+id/tvRe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="다시 울림"
+        android:textSize="50dp"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minSpinner" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:id="@+id/btnSubmit"
+        android:background="#0099ff"
+        android:text="확인"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnCancel"
+        android:layout_marginBottom="200dp"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:id="@+id/btnCancel"
+        android:background="#0099ff"
+        android:text="취소"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btnSubmit"
+        android:layout_marginBottom="200dp"/>
+
+</android.support.constraint.ConstraintLayout>
