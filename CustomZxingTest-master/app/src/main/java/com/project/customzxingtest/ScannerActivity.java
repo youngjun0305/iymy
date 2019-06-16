@@ -16,10 +16,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class MainActivity extends AppCompatActivity {
-
-    TextView barcode_Tv;
-
+public class ScannerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +37,6 @@ public class MainActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (resultCode == Activity.RESULT_OK) {
             IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-            barcode_Tv=(TextView)findViewById(R.id.barcode_Tv);
-            barcode_Tv.setText(scanResult.getContents());
-
-
            }
         }
     }
