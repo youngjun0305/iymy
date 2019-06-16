@@ -39,15 +39,16 @@
 
     <Button
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="#aaaaaa"
+        android:layout_height="80dp"
+        android:background="#0099ff"
         android:text="모두체크"
         android:textSize="30dp"
         android:textColor="#ffffff"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loSelect"
-        android:id="@+id/btnSelAll"/>
+        android:id="@+id/btnSelAll"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:layout_width="300dp"
@@ -61,6 +62,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnSelAll"
-        android:layout_marginBottom="80dp"/>
+        android:layout_marginBottom="50dp"/>
 
 </android.support.constraint.ConstraintLayout>
