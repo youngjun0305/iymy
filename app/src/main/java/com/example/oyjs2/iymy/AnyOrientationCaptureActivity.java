@@ -1,4 +1,4 @@
-package com.project.customzxingtest;
+package com.example.oyjs2.iymy;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 

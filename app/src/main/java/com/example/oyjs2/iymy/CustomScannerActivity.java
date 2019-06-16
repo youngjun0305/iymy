@@ -1,4 +1,4 @@
-package com.project.customzxingtest;
+package com.example.oyjs2.iymy;
 
 import android.app.Activity;
 import android.content.pm.PackageManager;
@@ -21,7 +21,7 @@ public class CustomScannerActivity extends Activity {
         setContentView(R.layout.activity_custom_scanner);
 
 
-        barcodeScannerView = (DecoratedBarcodeView)findViewById(R.id.zxing_barcode_scanner);
+        barcodeScannerView = findViewById(R.id.zxing_barcode_scanner);
         capture = new CaptureManager(this, barcodeScannerView);
         capture.initializeFromIntent(getIntent(), savedInstanceState);
         capture.decode();
