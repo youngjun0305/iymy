@@ -33,6 +33,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".med_list" />
+        <activity android:name=".FrontActivity"></activity>
     </application>
 
 </manifest>
