@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".med_list"
+    android:orientation="vertical">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="편집2"
+            android:textColor="#ff0000"
+            android:background="#00ff0000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/listModify"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="봉투목록"
+            android:textSize="35sp"
+            app:layout_constraintLeft_toRightOf="@+id/listModify"
+            app:layout_constraintRight_toLeftOf="@+id/add_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/add_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_launcher_background" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추가"
+                android:textColor="#ff0000"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000"
+        android:fastScrollEnabled="true"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="411dp"
+        android:layout_marginLeft="40dp"
+        android:divider="#000000"
+        android:dividerHeight="4dp">
+
+    </ListView>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/drug_add_img"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="새로운 봉투 추가하기"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/drug_add_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

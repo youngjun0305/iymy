@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNot"
+        android:text="복용하지 않은 약이 있습니다\n다시 울리시겠습니까?"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="200dp" />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:id="@+id/btnSet"
+        android:background="#0099ff"
+        android:text="설정하기"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnIgn"
+        android:layout_marginBottom="200dp"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:id="@+id/btnIgn"
+        android:background="#0099ff"
+        android:text="무시하기"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btnSet"
+        android:layout_marginBottom="200dp"/>
+
+</android.support.constraint.ConstraintLayout>
