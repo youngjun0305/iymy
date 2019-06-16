@@ -9,7 +9,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:id="@+id/chTvPill"
-        android:text="모두 체크"
+        android:text="00약봉지"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textColor="#000000"
