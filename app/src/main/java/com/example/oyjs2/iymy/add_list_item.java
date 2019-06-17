@@ -4,7 +4,25 @@ public class add_list_item {
     String title;
     String time;
     String sub;
-    int likes;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    String id;
+    boolean likes;
+
+    public boolean isLikes() {
+        return likes;
+    }
+
+    public void setLikes(boolean likes) {
+        this.likes = likes;
+    }
 
     public String getTitle() {
         return title;
@@ -30,16 +48,9 @@ public class add_list_item {
         this.sub = sub;
     }
 
-    public int getLikes() {
-        return likes;
-    }
 
-    public void setLikes(int likes) {
-        this.likes = likes;
-    }
-
-    public add_list_item(String title, String time, String sub, int likes) {
-
+    public add_list_item(String id, String title, String time, boolean likes, String sub) {
+        this.id = id;
         this.title = title;
         this.time = time;
         this.sub = sub;

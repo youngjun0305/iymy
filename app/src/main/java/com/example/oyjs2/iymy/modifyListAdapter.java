@@ -45,7 +45,6 @@ public class modifyListAdapter extends BaseAdapter {
             name = convertView.findViewById(R.id.del_name);
             delImg = convertView.findViewById(R.id.del_image);
             del_layout = convertView.findViewById(R.id.del_layout);
-
         }
         time.setText(modify_list_itemArrayList.get(position).getTime());
         name.setText(modify_list_itemArrayList.get(position).getName());
