@@ -18,9 +18,7 @@
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity android:name=".CustomScannerActivity"></activity>
         <activity android:name=".ScannerActivity">
-
         </activity>
-        <activity android:name=".find_pharmacy"></activity>
         <activity android:name=".main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

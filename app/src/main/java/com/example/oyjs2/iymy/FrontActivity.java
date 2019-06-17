@@ -1,6 +1,7 @@
 package com.example.oyjs2.iymy;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -57,8 +58,10 @@ public class FrontActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                outIntent = new Intent(FrontActivity.this, find_pharmacy.class);
-                startActivity(outIntent);
+                intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("geo:0,0?q=약국"));
+                startActivity(intent);
             }
         });
 
