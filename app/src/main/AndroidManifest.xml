@@ -28,7 +28,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".med_list" />
         <activity android:name=".med_inf" />
         <activity android:name=".add_alarm" />
         <activity android:name=".alarm_add" />

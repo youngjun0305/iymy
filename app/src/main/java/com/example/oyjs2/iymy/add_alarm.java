@@ -26,7 +26,7 @@ public class add_alarm extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         floatingTxt = findViewById(R.id.floatingText);
 
-        titles.setText("알람");
+        titles.setText("봉투");
         leftImg.setImageResource(R.drawable.returns);
         setting.setImageResource(R.drawable.checkmark);
         fab.setImageResource(R.drawable.checkmark);

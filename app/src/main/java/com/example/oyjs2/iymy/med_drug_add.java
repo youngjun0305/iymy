@@ -69,7 +69,7 @@ public class med_drug_add extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(med_drug_add.this, med_list.class);
+                Intent intent = new Intent(med_drug_add.this, med_list_see.class);
                 startActivity(intent);
                 finish();
             }

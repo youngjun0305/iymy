@@ -34,13 +34,13 @@
         android:text="반복"
         app:layout_constraintTop_toBottomOf="@+id/alarm_add_time" />
 
-    <android.support.v7.widget.AppCompatSpinner
+    <Spinner
         android:id="@+id/repeat_time"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/repeat_txt"></android.support.v7.widget.AppCompatSpinner>
+        app:layout_constraintTop_toBottomOf="@+id/repeat_txt"></Spinner>
 
     <View
         android:layout_width="match_parent"

@@ -7,9 +7,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,18 +19,23 @@ import java.util.ArrayList;
 public class alarm_add extends AppCompatActivity {
     ImageView leftImg, setting, medlist_addIcon;
     TextView titles,settingInf,floatingTxt;
-    View imgLayout;
+    View imgLayout, divide;
     Button cancel, check;
     ArrayList<modify_list_item> modify_list_itemArrayList;
     ArrayList<String>name = new ArrayList<String>();
     modifyListAdapter modifyListAdapter;
     ListView listView;
-
+    Spinner repeat_time;
+    String[] repeat = {"12시간","매일","2일","3일","4일","5일","6일","7일","10일","15일","1달"};
+    String repeat_time_save;
+    ArrayAdapter<String>genreAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_add);
 
+        divide= findViewById(R.id.divide);
+        repeat_time = findViewById(R.id.repeat_time);
         listView = findViewById(R.id.listView);
         leftImg = findViewById(R.id.leftImg);
         setting = findViewById(R.id.setting);
@@ -39,6 +46,8 @@ public class alarm_add extends AppCompatActivity {
         cancel = findViewById(R.id.cancel);
         check = findViewById(R.id.check);
         modify_list_itemArrayList = new ArrayList<modify_list_item>();
+        genreAdapter = new ArrayAdapter<String>(this, R.layout.spinneritem, repeat);
+        repeat_time.setAdapter(genreAdapter);
         name.add("봉투");
         name.add("봉투2");
         name.add("봉투3");
@@ -48,9 +57,9 @@ public class alarm_add extends AppCompatActivity {
         name.add("봉투7");
         setting_list();
         leftImg.setImageResource(R.drawable.returns);
-        titles.setText("봉투");
+        titles.setText("알람");
         setting.setImageResource(R.drawable.house);
-
+        divide.setVisibility(View.GONE);
         leftImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,7 +105,17 @@ public class alarm_add extends AppCompatActivity {
                 dlg.show();
             }
         });
+        repeat_time.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                repeat_time_save= repeat[position];
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
     public void setting_list(){
         modify_list_itemArrayList.clear();
