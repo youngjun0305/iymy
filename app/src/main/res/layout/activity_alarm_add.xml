@@ -62,7 +62,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginRight="10dp"
-        android:src="@drawable/plusbutton"
+        android:src="@drawable/plussignin_ablackcircle"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/repeat_time" />
 

@@ -97,7 +97,7 @@
             android:id="@+id/add_alarm"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/plusbutton"
+            android:src="@drawable/plussignin_ablackcircle"
             app:layout_constraintRight_toRightOf="parent" />
 
         <TextView
