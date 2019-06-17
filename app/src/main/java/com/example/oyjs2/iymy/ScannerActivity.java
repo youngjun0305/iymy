@@ -37,6 +37,7 @@ public class ScannerActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (resultCode == Activity.RESULT_OK) {
             IntentResult scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+            Toast.makeText(ScannerActivity.this,"바코드: " + scanResult,Toast.LENGTH_LONG).show();
            }
         }
     }
