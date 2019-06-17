@@ -5,12 +5,17 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class FrontActivity extends AppCompatActivity {
 
-    ImageButton search, camSearch, barSerch, pharmSearch, alarm, pill;
+    ImageButton camSearch, barSerch, pharmSearch, alarm, pill;
     Intent intent, outIntent;
+    EditText search;
+    ImageView search_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,7 @@ public class FrontActivity extends AppCompatActivity {
 
         intent = getIntent();
 
+        search_button = findViewById(R.id.search_button);
         search = findViewById(R.id.search);
         camSearch = findViewById(R.id.camSearch);
         barSerch = findViewById(R.id.barSearch);
@@ -66,8 +72,8 @@ public class FrontActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //outIntent = new Intent(FrontActivity.this, );
-                //startActivity(outIntent);
+                outIntent = new Intent(FrontActivity.this, alarm_list.class);
+                startActivity(outIntent);
             }
         });
 
@@ -75,8 +81,8 @@ public class FrontActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //outIntent = new Intent(FrontActivity.this, );
-                //startActivity(outIntent);
+                outIntent = new Intent(FrontActivity.this, med_list_see.class );
+                startActivity(outIntent);
             }
         });
     }
