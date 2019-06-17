@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".med_list_modify">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drugImg"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        app:layout_constraintTop_toBottomOf="@+id/title_layout"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000"
+        android:fastScrollEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/drugImg" />
+
+    <LinearLayout
+        android:id="@+id/totalDrug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/drugImg">
+
+        <TextView
+            style="@style/menuFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="잔여량/총량" />
+
+        <TextView
+            android:id="@+id/drug_total_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="10/15"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000"
+        android:fastScrollEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/totalDrug" />
+
+    <LinearLayout
+        android:id="@+id/finishDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/totalDrug">
+
+        <TextView
+            style="@style/menuFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="끝나는 날 : " />
+
+        <TextView
+            android:id="@+id/drug_Date_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="12월 4일"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#000000"
+        android:fastScrollEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/finishDate" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/finishDate">
+
+        <TextView
+            android:id="@+id/txt"
+            style="@style/menuFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알람" />
+
+        <ImageView
+            android:id="@+id/add_alarm"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/plusbutton"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가"
+            app:layout_constraintLeft_toLeftOf="@+id/add_alarm"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_alarm" />
+
+        <LinearLayout
+            android:id="@+id/alarmList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/txt">
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <include
+                    layout="@layout/sub_listview"
+                    />
+            </ScrollView>
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:id="@+id/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/check"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="추가"
+        android:id="@+id/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/cancel"
+        app:layout_constraintRight_toRightOf="parent"/>
+</android.support.constraint.ConstraintLayout>

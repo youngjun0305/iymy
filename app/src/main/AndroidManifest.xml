@@ -29,6 +29,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".med_list" />
+        <activity android:name=".med_inf" />
+        <activity android:name=".add_alarm" />
+        <activity android:name=".alarm_add" />
+        <activity android:name=".alarm_list" />
+        <activity android:name=".med_drug_add" />
+        <activity android:name=".med_list_modify" />
+        <activity android:name=".alarm_list_modify" />
+        <activity android:name=".med_add_alarm"/>
+        <activity android:name=".med_list_see" />
         <activity android:name=".FrontActivity"></activity>
         <activity android:name=".SearchActivity"></activity>
     </application>
